@@ -1,0 +1,67 @@
+{
+  "name": "@avanio/auth-header",
+  "version": "0.0.1",
+  "description": "Typescript/Javascript http auth header utils",
+  "main": "./dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build",
+    "test": "nyc mocha",
+    "lint": "eslint src",
+    "validate": "tsc --noEmit"
+  },
+  "files": [
+    "dist"
+  ],
+  "mocha": {
+    "exit": true,
+    "extension": [
+      "ts",
+      "js"
+    ],
+    "recursive": true,
+    "require": [
+      "ts-node/register",
+      "source-map-support/register"
+    ],
+    "reporters": [
+      "spec",
+      "mocha-junit-reporter"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AvanioOy/auth-header.git"
+  },
+  "keywords": [
+    "http",
+    "header",
+    "auth",
+    "typescript"
+  ],
+  "author": "mharj",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AvanioOy/auth-header/issues"
+  },
+  "homepage": "https://github.com/AvanioOy/auth-header#readme",
+  "devDependencies": {
+    "@types/chai": "^4.3.4",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "^18.15.11",
+    "@typescript-eslint/eslint-plugin": "^5.59.6",
+    "@typescript-eslint/parser": "^5.59.6",
+    "chai": "^4.3.7",
+    "eslint": "^8.40.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-deprecation": "^1.4.1",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-sonarjs": "^0.19.0",
+    "mocha": "^10.2.0",
+    "nyc": "^15.1.0",
+    "prettier": "^2.8.8",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.3"
+  }
+}
